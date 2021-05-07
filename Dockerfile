@@ -5,7 +5,7 @@ RUN --mount=type=cache,target=/var/cache/apk \
     DOWNLOAD_CACHE_DIRECTORY="/opt/downloads" && \
     ln -s /var/cache/apk /etc/apk/cache && \
     apk add --update \
-      mysql-client && \
+      mysql-client bind-tools && \
     echo '' > /root/.ash_history
 
 COPY scripts/init.sh /
